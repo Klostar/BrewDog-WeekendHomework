@@ -14,7 +14,7 @@ BrewDogListView.prototype.bindEvents = function () {
     // this.elemenet.addEventListener('change', (event) => {
     //   const BrewDogIndex = event.target.value
     //
-    })
+    // })
 
   });
 
@@ -26,13 +26,15 @@ BrewDogListView.prototype.bindEvents = function () {
     //     brewdogView.render();
 
 BrewDogListView.prototype.populate = function (data) {
+  const dropdown = document.querySelector('#option');
   data.forEach((brewDog, index) => {
+
     const option = document.createElement('option');
-    option.textContext = brewDog.name;
+    option.textContent = brewDog.name;
 
     console.log(brewDog.name);
-    this.name.appendChild('option')
-    // option.value = index;
+    dropdown.appendChild(option)
+    option.value = index;
     // this.element.appendChild('#option');
   })
 
